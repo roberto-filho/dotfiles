@@ -5,11 +5,11 @@ echo "$HOST_USER:pw" | chpasswd
 chown $HOST_USER:$HOST_USER /home/$HOST_USER
 adduser $HOST_USER sudo
 
-if [ ! -f /dev/vboxdrv ]; then
+if [ -e /dev/vboxdrv ]; then
+    echo "Found VirtualBox Driver."
+else
     echo "Could not find VirtualBox Driver. Ooops. Setting up...."
     /etc/init.d/vboxdrv setup
-else
-    echo "Found VirtualBox Driver."
 fi
 
 su $HOST_USER
