@@ -34,5 +34,8 @@ WORKDIR /tmp
 ENV KUBERNETES_PROVIDER=vagrant
 RUN wget --quiet https://github.com/kubernetes/kubernetes/releases/download/v1.0.6/kubernetes.tar.gz
 RUN chmod go+rw /tmp/kubernetes.tar.gz
+RUN tar -xf kubernetes.tar.gz && \
+    cp ./kubernetes/platforms/linux/amd64/* /usr/local/bin && \
+    chmod go+rx /usr/local/bin/*
 
 WORKDIR /project
