@@ -12,11 +12,16 @@ function _docker_run() {
     eval "docker run $argv"
 }
 
+function _docker_shell_name() {
+    local shell=$1
+    echo $shell${${PWD//\//.}:-200} #make sure we stay under 255 chars
+}
+
 #standard default docker zsh function
 function _docker_zsh() {
     local shell=$1
     local src=$2
-    local name=$shell${${PWD//\//.}:-200} #make sure we stay under 255 chars
+    local name=$(_docker_shell_name $shell)
 
     echo "Starting Container: $name (${#name})"
 
