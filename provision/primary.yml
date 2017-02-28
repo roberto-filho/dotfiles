@@ -3,6 +3,5 @@
   connection: local
   user: filho
   roles:
-    - ubuntu_1404
+    - ubuntu_1604
     - core
-    - primary
