@@ -8,5 +8,6 @@ cd ~
 if [ ! -d "~/workspace/dotfiles" ]; then
     mkdir workspace
     cd workspace
-    git clone git@github.com:roberto-filho/dotfiles.git
+    # clone using https so it does not fail
+    git clone https://github.com/roberto-filho/dotfiles.git
 fi
