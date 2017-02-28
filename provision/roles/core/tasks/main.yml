@@ -2,6 +2,9 @@
 - include: clean_packages.yml
   become: true
 
+# Java first, so it fails fast
+- include: install_java.yml
+
 #standard packages
 - include: std_packages.yml
   become: true
@@ -18,6 +21,6 @@
 
 - include: docker.yml
 
-- include: install_java.yml
-
 - include: jdownloader.yml
+
+- include: virtualbox.yml

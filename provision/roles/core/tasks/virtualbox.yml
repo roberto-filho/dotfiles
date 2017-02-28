@@ -1,0 +1,7 @@
+---
+- name: Install virtualbox packages
+  apt: pkg={{ item }}
+  with_items:
+    - virtualbox
+    - virtualbox-ext-pack
+    - virtualbox-guest-additions-iso
