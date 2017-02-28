@@ -24,3 +24,4 @@
 - include: jdownloader.yml
 
 - include: virtualbox.yml
+  become: true

@@ -2,10 +2,10 @@
 #partner repo
 - name: partner repository
   apt_repository: repo='deb http://archive.canonical.com/ubuntu xenial partner'
-  sudo: yes
+  become: true
 - name: partner repository (src)
   apt_repository: repo='deb-src http://archive.canonical.com/ubuntu xenial partner'
-  sudo: yes
+  become: true
 #extras repo
 #- name: extra repository
 #  apt_repository: repo='deb http://extras.ubuntu.com/ubuntu yakkety main'
