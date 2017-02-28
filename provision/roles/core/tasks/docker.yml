@@ -11,6 +11,6 @@
   sudo: true
   when: not st.stat.exists
 - name: Disable sudo only access to docker
-  command: usermod -aG docker mark
+  command: usermod -aG docker filho
   sudo: true
   when: not st.stat.exists

@@ -1,5 +1,5 @@
 [user]
-	name = Mark Mandel
-	email = mark.mandel@gmail.com
+	name = Roberto Filho
+	email = roberto.w.filho@gmail.com
 [push]
-	default = tracking
+	default = upstream
