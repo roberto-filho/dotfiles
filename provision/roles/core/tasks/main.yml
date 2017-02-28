@@ -1,10 +1,10 @@
 #clean out some stuff
 - include: clean_packages.yml
-  sudo: yes
+  become: true
 
 #standard packages
 - include: std_packages.yml
-  sudo: true
+  become: true
 
 #git config
 - include: _git_config.yml

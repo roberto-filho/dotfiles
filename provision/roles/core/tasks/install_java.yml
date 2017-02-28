@@ -1,13 +1,13 @@
 ---
 - name: install python software properties (apt-add-repository)
   apt: pkg=python-software-properties
-  sudo: true
+  become: true
 - name: "Add the Oracle Java JDK repository"
   apt_repository: repo=ppa:webupd8team/java
-  sudo: true
+  become: true
 - name: "Set Java acceptance"
   shell: sudo echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
-  sudo: true
-- name: "install: Java"
+  become: true
+- name: "install: Java 8"
   apt: pkg=oracle-java8-installer
-  sudo: true
+  become: true
