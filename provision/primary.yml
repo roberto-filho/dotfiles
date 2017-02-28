@@ -3,5 +3,5 @@
   connection: local
   user: filho
   roles:
-    - ubuntu_1604
+    - xubuntu_1604
     - core
