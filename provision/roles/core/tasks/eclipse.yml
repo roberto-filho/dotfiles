@@ -1,0 +1,11 @@
+---
+- name: download eclipse
+  get_url:
+    url: "http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/neon/2/eclipse-rcp-neon-2-linux-gtk-x86_64.tar.gz"
+    dest: ~/Downloads/
+    mode: 0660
+- name: untar eclipse
+  unarchive:
+    src: ~/Downloads/eclipse-rcp-neon-2-linux-gtk-x86_64.tar.gz
+    dest: ~/
+    remote_src: True

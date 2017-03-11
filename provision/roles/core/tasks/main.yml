@@ -25,3 +25,5 @@
 
 - include: virtualbox.yml
   become: true
+
+- include: eclipse.yml
